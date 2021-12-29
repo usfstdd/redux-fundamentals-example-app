@@ -2,10 +2,10 @@ import todosReducer from "./features/todos/todosSlice";
 import filtersReduce from "./features/filters/filtersSlice";
 
 import {
-    combineReducer
+    combineReducers
 } from 'redux';
 
-const rootReducer = combineReducer({
+const rootReducer = combineReducers({
     todos: todosReducer,
     filters: filtersReduce
 })

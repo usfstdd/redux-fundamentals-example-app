@@ -1,4 +1,4 @@
-initialstate = {
+const initialstate = {
     status: 'all',
     colors: []
 }

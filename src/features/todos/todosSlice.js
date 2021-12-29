@@ -17,7 +17,7 @@ const initiaState = [{
 
 
 function nextTodoID(todos) {
-    todos.reduce((newItemID, item) => Math.max(newItemID, item.id), 0)
+    return todos.reduce((newItemID, item) => Math.max(newItemID, item.id) + 1, -1)
 }
 
 export default function todosReducer(state = initiaState, action) {
@@ -26,7 +26,7 @@ export default function todosReducer(state = initiaState, action) {
             return [
                 ...state,
                 {
-                    id: nextTodoID(state.todos),
+                    id: nextTodoID(state),
                     text: action.payload,
                     completed: false,
 
